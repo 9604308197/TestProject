@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Search :</p>
+    <input type="text" onkeyup="Display(event)" />
+    <!-- <input type="text" onkeypress="Display(event)" /> -->
+</body>
+</html>
+<script>
+    function Display(event) {
+        let val = event.target.value;
+        let arrNums = ["Angular","ReactJS","CSS","HTML"];
+        for (let i = 0; i < arrNums.length; i++) {
+            if (arrNums[i] ===(val)) 
+            {
+                console.log("valid language " + i + " " + arrNums[i]);
+                break;
+            }
+            else
+            {
+                console.log(" not valid language ");
+            }
+        }
+    }
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Select :</p>
+    <select onchange="Display(event)">
+        <option>Select</option>
+        <option>Front End Language</option>
+        <option>Back End Language</option>
+        <ul id="front">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+         </ul>
+         <ul id="back">
+                <li>Java</li>
+                <li>PHP</li>
+                <li>Python</li>
+         </ul>
+    </select>
+    <p id="result">Please select language</p>
+
+
+</body>
+</html>
+<script>
+    function Display(event) {
+        console.log("Select ", event.target.value);
+        if (event.target.value === "Front End Language") {
+            // document.write("html,css,JavaScript");
+            document.getElementById("result").innerHTML = "front";
+        }
+        else if (event.target.value === "Back End Language") {
+            // document.write("Java,Python,Php");
+            document.getElementById("result").innerHTML = "back";
+        }
+        else
+        {
+            document.getElementById("result").innerHTML = "Please select language";
+        }
+    }
+</script>

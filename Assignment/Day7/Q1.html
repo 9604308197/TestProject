@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <b>  Product Amount=5</b>
+    <p id="p1">  Data</p>
+    <input type="text"  id=data/>
+    <ul>Amounts</ul>
+    <li>6000</li>
+    <li>2000</li>
+    <li>4000</li>
+    <li>1000</li>
+    <li>2000</li>
+
+    <h3> Total=15000</h3>
+  <br>  </br>
+    <div class="form-group">
+        <button class="btn btn-success" onclick="Display()"> Sum</button>
+    </div>
+</body>
+</html>
+<script>
+  const arrData = [6000, 2000, 4000, 1000, 2000];
+
+  async function Display() {
+      const SumAmount = await GetSum();
+      // next execute
+      console.log("Sum : "+SumAmount);
+      const TaxAmount = (SumAmount * 10) / 100;
+      const AmountWithTax = SumAmount + TaxAmount;
+      console.log("Amount with Tax : "+AmountWithTax);
+      const AmountAfterDiscount = AmountWithTax - ((AmountWithTax * 5) / 100);
+      console.log("Amount with Discount : "+AmountAfterDiscount);
+  }
+  Display();
+  function GetSum() {
+       let sum=0;
+      // arrData.forEach(item=>{
+      //     sum = sum + item;
+      // })
+      // return sum;
+      const prom = new Promise((Resolve, Reject) => {
+          let sum = 0;
+          arrData.forEach(item => {
+              sum = sum + item;
+          })
+          Resolve(sum);
+      })
+      return prom;
+  }
+
+</script>

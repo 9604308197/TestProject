@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <div class="p-5">
+            <img id="loader" src="./Spinner-3.gif"/>
+            <img src="./M1.jpg" width="30%" id="m1"/>
+    
+             <img  src="./M2.jpg" width="30%" id="m2"/>
+    
+             <img  src="./M3.jpg" width="30%" id="m3"/>
+
+            <img  src="./M4.jpeg" width="30%" id="m4"/>
+
+            <img  src="./M5.jpg" width="30%" id="m5"/>
+ 
+            <img  src="./M6.jpg" width="30%" id="m6"/>
+
+            
+           
+        </div>
+</body>
+</html>
+<script>
+            document.getElementById("m1").style.display='none';
+            document.getElementById("m2").style.display='none';
+            document.getElementById("m3").style.display='none';
+            document.getElementById("m4").style.display='none';
+            document.getElementById("m5").style.display='none';
+            document.getElementById("m6").style.display='none';
+
+            var prom= new Promise((Resolve,Reject)=>
+            {
+                setTimeout(()=>{
+                    Resolve("Resolved");
+                },2000)
+            })
+            prom.then(data=>{
+                document.getElementById("loader").style.display='none';
+                document.getElementById("m1").style.display='inline';
+                 
+            })
+
+            var prom1= new Promise((Resolve,Reject)=>
+            {
+                setTimeout(()=>{
+                    Resolve("Resolved");
+                },4000)
+            })
+            prom1.then(data=>{
+              
+                document.getElementById("m2").style.display='inline';
+                 
+            })
+
+            var prom2= new Promise((Resolve,Reject)=>
+            {
+                setTimeout(()=>{
+                    Resolve("Resolved");
+                },6000)
+            })
+            prom2.then(data=>{
+             
+                document.getElementById("m3").style.display='inline';
+                 
+            })
+
+            var prom3= new Promise((Resolve,Reject)=>
+            {
+                setTimeout(()=>{
+                    Resolve("Resolved");
+                },8000)
+            })
+            prom3.then(data=>{
+              
+                document.getElementById("m4").style.display='inline';
+                 
+            })
+
+            var prom4= new Promise((Resolve,Reject)=>
+            {
+                setTimeout(()=>{
+                    Resolve("Resolved");
+                },10000)
+            })
+            prom4.then(data=>{
+              
+                document.getElementById("m5").style.display='inline';
+                 
+            })
+
+            var prom5= new Promise((Resolve,Reject)=>
+            {
+                setTimeout(()=>{
+                    Resolve("Resolved");
+                },12000)
+            })
+            prom5.then(data=>{
+               
+                document.getElementById("m6").style.display='inline';
+                 
+            })      
+</script>

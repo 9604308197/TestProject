@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+</body>
+</html>
+<script>
+function Employee(eid, ename,salary,attendance,leavebalance)
+{
+    this.employeeId = eid;
+    this.employeeName = ename;
+    this.employeeSalary = salary;
+    this.empAttendance=attendance;
+    this.empLeavebalance=leavebalance;
+}
+
+var Result = new Employee(1,"Rahul Sharma",50000,75,10);
+
+console.log(Result.employeeId);
+console.log(Result.employeeName);
+console.log(Result.empAttendance);
+console.log(Result.empLeavebalance);
+
+var Result1 = new Employee(2,"Riya Patel",40000,65,5);
+console.log(Result1.employeeId);
+console.log(Result1.employeeName);
+console.log(Result1.empAttendance);
+console.log(Result1.empLeavebalance);
+
+
+function Display(1)
+{
+
+}
+
+function attendance(eid)
+{
+    return Result.empAttendance;
+}
+
+function leavebalance(eid)
+{
+    return Result.empLeavebalance;
+}
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> 
+</head>
+<body>
+<div class="container-fluid">
+<div class="row mt-5">
+<div class="col-md-4">
+</div>
+<div class="col-md-4">
+<div class="text-center">
+<h5 class="mt-5" > Sign Up Form </h5>
+</div>
+<div class="form-group">
+<label> Mobile No: </label>
+<input type="number" class="form-control" id="v1"/>
+<span class="alert-danger" id="msg1">Please Enter mobile number</span>
+</div>
+<div class="form-group">
+<label> Password: </label>
+<input type="password" class="form-control" id="v2"/>
+<span class="alert-danger" id="msg2">Please Enter correct password</span>
+</div>
+<div class="form-group">
+    <label> Display Name: </label>
+    <input type="text" class="form-control">
+ </div>
+<div class="form-group">
+    <button class="btn btn-success" onclick="checkPassword()">Submit</button>
+</div>
+</div>
+<div class="col-md-4">
+</div>
+</div>
+</div>
+</body>
+</html>
+
+<script>
+document.getElementById("msg1").style.display ='none';
+document.getElementById("msg2").style.display ='none';
+
+function checkPassword()
+{  
+        var pw = document.getElementById("v2").value;  
+  
+      if(pw =="") 
+      {  
+         document.getElementById("message").innerHTML ="Enter password" ;  
+         return false;  
+      }   
+      if(pw.length !=8) 
+      {  
+         document.getElementById("message").innerHTML ="Length should be 8" ;  
+         return false;  
+      }  
+      else {  
+         alert("Sign Up Successfully Done");  
+      }  
+    }  
+</script>  
