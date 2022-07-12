@@ -1,0 +1,16 @@
+<p>que2 works!</p>
+
+
+<div class="form-group">
+    <h3><b><label>Enter a Number</label></b></h3>
+    <input type="text" class="form-control" [(ngModel)]= "num" />
+</div>
+<h3><div [ngSwitch]="num">
+    <p *ngSwitchCase="100">One Hundred</p>
+    <p *ngSwitchCase="101">One Hundred One</p>
+    <p *ngSwitchCase="102">One Hundred Two</p>
+    <p *ngSwitchCase="103">One Hundred Three</p>
+    <p *ngSwitchCase="104">One Hundred Four</p>
+    <p *ngSwitchCase="105">One Hundred Five</p>
+    <p *ngSwitchDefault>Please Enter Value between 100 to 105</p>
+</div></h3>
