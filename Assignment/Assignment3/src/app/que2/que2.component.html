@@ -1,0 +1,20 @@
+<p>que2 works!</p>
+
+
+
+
+<div class="container">
+    <h2>Employee Leave Request</h2>
+    
+    <h4>Employee Code</h4>
+    <input type="text" class="form-control" [(ngModel)]="employeeCode"/>
+    <span class="alert-danger" *ngIf="employeeCode.length <=4 || employeeCode.length >8">Employee Code not valid </span>
+    <h4>Department</h4>
+    <input type="text" class="form-control" [(ngModel)]="department"/>
+    <span class="alert-warning" *ngIf=" department.length ===0">Enter Department name </span>
+    <br>
+    <div>
+        <button class="btn btn-success" (click)="onSend()">Send</button>
+        <p class="alert-success" >Done...!! </p>
+    </div>
+</div>

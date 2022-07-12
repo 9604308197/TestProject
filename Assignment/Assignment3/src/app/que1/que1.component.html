@@ -1,0 +1,19 @@
+<p>que1 works!</p>
+<div class="container">
+<h1>Contact Form</h1>
+<div>
+    <h4>First Name</h4>
+    <input type="text" #fName  class="form-control"/>
+    <h4>Last Name</h4>
+    <input type="text" #lName class="form-control"/>
+
+</div>
+<br>
+<div>
+<p>First Name ={{fnLength}}</p>
+<p>Last Name={{lnLength}}</p>
+</div>
+<div>
+    <button class="btn btn-success" (click)="onSubmit(fName,lName)">Submit</button>
+</div>
+</div>
