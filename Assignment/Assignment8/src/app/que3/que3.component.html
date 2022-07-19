@@ -1,0 +1,11 @@
+
+<table class="table table-striped">
+    <th>User Id</th>
+    <th>User Name</th>
+    <th>Status</th>
+    <tr *ngFor="let user of users">
+        <td>{{user.userid}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.status | userstatus}}</td>
+        </tr>
+</table>
