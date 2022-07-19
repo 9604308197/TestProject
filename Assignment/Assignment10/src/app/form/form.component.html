@@ -1,0 +1,30 @@
+<h1 class="container text-center">FORM</h1>
+<br>
+<form [formGroup]="formClient" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Client Id</label>
+        <input type="text" class="form-control" formControlName="clid"/>
+        <span class="alert-danger" *ngIf="formClient.controls['clid'].hasError('required')">Client Id Required</span>
+        <span class="alert-danger" *ngIf="formClient.controls['clid'].hasError('minlength')">Id Required 6 Character</span>
+    </div>
+    <div class="form-group">
+        <label>Client Name</label>
+        <input type="text" class="form-control" formControlName="clname"/>
+        <span class="alert-danger" *ngIf="formClient.controls['clname'].hasError('required')">Client Name Required</span>
+        <span class="alert-danger" *ngIf="formClient.controls['clname'].hasError('minlength')">Name Required 3 Character</span>
+        <span class="alert-danger" *ngIf="formClient.controls['clname'].hasError('maxlength')">Name can have max 20 Character</span>
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="form-control" formControlName="address"/>
+        <span class="alert-danger" *ngIf="formClient.controls['address'].hasError('required')">Address Required</span>
+    </div>
+    <div class="form-group">
+        <label>Phone</label>
+        <input type="text" class="form-control" formControlName="phone"/>
+        <span class="alert-danger" *ngIf="formClient.controls['phone'].hasError('pattern')">Digit Only</span>
+    </div>
+    <div class="form-group">
+       <button class="btn btn-primary">Submit</button>
+    </div>   
+</form>
