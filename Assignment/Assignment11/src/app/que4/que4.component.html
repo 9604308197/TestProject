@@ -1,0 +1,35 @@
+<p>que4 works!</p>
+<h2> Product List </h2>
+<div class="row">
+    <div class="col-6">
+        <table class="table table-striped">
+            <div>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Size</th>
+            <th>Status</th>
+            </div>
+            <div>
+            <tr *ngFor="let product of ProductsData">
+               <td *ngIf="selectPId !== product.productId">{{product.productId}}</td>
+               <!-- <td>{{product.productname}}</td>
+               <td>{{product.price}}</td>
+               <td>{{product.size}}</td>
+               <td>{{product.status}}</td> -->
+
+                <td *ngIf="selectPId === product.productId"><input type="text" placeholder="Enter Product Id"></td>
+                <!-- <td><input type="text" placeholder="Enter Product Name"></td>
+                <td><input type="text" placeholder="Enter Price"></td>
+                <td><input type="text" placeholder="Enter Size"></td>
+                <td><input type="text" placeholder="Enter Status"></td>  -->
+                <td><button (click)="onEdit(product)">Edit</button></td>
+            </tr>
+            </div>
+        </table>
+    </div>
+  
+    <!-- <div class="col-6">
+        <app-que4child (EventProUpdate)="onProductUpdate($event)"></app-que4child>
+    </div> -->
+</div>

@@ -1,0 +1,25 @@
+
+<h5>Users</h5>
+<div>
+    <table class="table">
+        <thead>
+            <th>User Id</th>
+            <th>Display Name</th>
+         
+        </thead>
+       <tbody *ngFor="let user of UserData">
+        <tr >
+            <td>{{user.uid}}</td>
+            <td>{{user.dname}}</td>
+           
+            <td><button class="btn btn-info text-white" (click)="onDetails(user.uid)">Details</button></td>
+        </tr>
+        <tr *ngIf="selectedUId === user.uid">
+            <td colspan="4">
+                <app-que3details [PropUser]="user"></app-que3details>
+            </td>
+        </tr>
+       </tbody>
+        
+    </table>
+</div>

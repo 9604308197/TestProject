@@ -1,0 +1,24 @@
+
+
+<h2> Product List </h2>
+<div class="row">
+    <div class="col-6">
+        <table class="table table-striped">
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Size</th>
+            <th>Status</th>
+            <tr *ngFor="let product of ProductsData">
+                <td>{{product.pid}}</td>
+                <td>{{product.pname}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.size}}</td>
+                <td>{{product.status}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-6">
+        <app-add-product (EventProUpdate)="onProductUpdate($event)"></app-add-product>
+    </div>
+</div>
