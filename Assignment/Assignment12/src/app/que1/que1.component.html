@@ -1,0 +1,40 @@
+<p>que1 works!</p>
+<h5>Users</h5>
+<div class="container mt-2">
+    <div class="row">
+    <div class="col-6">
+    <table class="table table-striped">
+        <thead>
+            <th>Emp Id</th>
+            <th>Emp Name</th>
+            <th>Salary</th>
+         
+        </thead>
+       <tr *ngFor="let data of GridData">
+            <td>{{data.eid}}</td>
+            <td>{{data.ename}}</td>
+            <td>{{data.salary}}</td>
+            <td><button class="btn btn-info text-white" (click)="onSelect(data)">Select</button></td>
+       </tr>
+        
+    </table>
+</div>
+
+<div class="col-6">
+    <table class="table table-striped">
+        <thead>
+            <th>Emp Id</th>
+            <th>Emp Name</th>
+            <th>Salary</th>
+         
+        </thead>
+       <tr *ngFor="let data of GridData2">
+            <td>{{data.eid}}</td>
+            <td>{{data.ename}}</td>
+            <td>{{data.salary}}</td>
+       </tr>
+        
+    </table>
+</div>
+</div>
+</div>

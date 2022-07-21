@@ -1,0 +1,32 @@
+
+<form [formGroup]="frmContact" (ngSubmit)="onSubmit()">
+    <p>Forms</p>
+    <div class="form-group">
+        <label>User Name</label>
+        <input type="text" formControlName="fullname" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <h5> Role Assign</h5>
+        <div formArrayName="role">
+            <div *ngFor="let role of role.controls; let i=index">
+                <div [formGroupName]="i">
+                    <h2>{{i}} Role Name </h2>
+                    <div class="row">
+                        <div class="col-4">
+                            <input type="text" formControlName="role" class="form-control" placeholder="Enter role"/>
+                        </div>
+                        <div class="col-4">
+                            <button (click)="removeRole(i)" class="btn btn-danger">Remove Item</button>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button (click)="addRole()" class="btn btn-primary">Add Roles</button>
+    </div>    
+    <div class="mt-2">
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>
